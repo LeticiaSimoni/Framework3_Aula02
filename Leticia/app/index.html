@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disciplinas da Universidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/system.js"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('js/index.js').catch(err=> console.log(err));
+    </script>
+</head>
+<body>
+    <h1>Disciplinas da Universidade</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="Numero">Código da disciplina: </label>
+            </div>
+            <div class="col">
+                <input required id="Numero"></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Descricao">Descrição: </label>
+            </div>
+            <div class="col">
+                <input required id="Descricao"></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Data">Data de início: </label>
+            </div>
+            <div class="col">
+                <input required id="Data" type="date" class=".form-control"></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Valor">Valor da disciplina: </label>
+            </div>
+            <div class="col">
+                <input required id="Valor" type="number"></input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Optativa">Optativa: </label>
+            </div>
+            <div class="col">
+                <select class="custom-select" name="Optativa" id="Optativa">
+                    <option selected>Selecione uma opção...</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                  </select>
+            </div>
+           
+        </div>
+    </div>
+
+<div>
+    <button type="submit" id="BotaoIncluir">Incluir</button>
+    <button type="submit" id="BotaoImportar">Importar</button>
+    <button type="submit" id="BotaoConsultar">Consultar</button>
+    <button type="submit" id="BotaoExcluir">Excluir</button>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th scope="col">Código da disciplina</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Data de início</th>
+        <th scope="col">Valor (R$)</th>
+        <th scope="col">Optativa</th>
+    </tr>
+    <tbody id="Resultados">
+    </tbody>
+
+</table>
+
+
+</body>
+</html>

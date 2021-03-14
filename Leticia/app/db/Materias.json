@@ -1,0 +1,18 @@
+{
+  "Materias": [
+    {
+      "id": "2",
+      "Descricao": "Fotografia",
+      "Data": "2021-03-27",
+      "Valor": 500,
+      "Optativa": "Sim"
+    },
+    {
+      "id": "3",
+      "Descricao": "Drift",
+      "Data": "2021-03-01",
+      "Valor": 15420,
+      "Optativa": "Não"
+    }
+  ]
+}
